@@ -1,37 +1,58 @@
 package com.company;
-/*
- * Classname
- *
- * Version info
- * https://www.oracle.com/technetwork/java/codeconventions-150003.pdf
- * Copyright notice
- */
 
 public class Main {
 
-    public static void main(java.lang.String[] args) {
-        java.lang.String harryPotter = "Mr. and Mrs. Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much. They were the last people you'd expect to be involved in anything strange or mysterious, because they just didn't hold with such nonsense. \n" +
-                "\n" +
-                "Mr. Dursley was the director of a firm called Grunnings, which made drills. He was a big, beefy man with hardly any neck, although he did have a very large mustache. Mrs. Dursley was thin and blonde and had nearly twice the usual amount of neck, which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbors. The Dursleys had a small son called Dudley and in their opinion there was no finer boy anywhere. \n" +
-                "\n" +
-                "The Dursleys had everything they wanted, but they also had a secret, and their greatest fear was that somebody would discover it. They didn't think they could bear it if anyone found out about the Potters. Mrs. Potter was Mrs. Dursley's sister, but they hadn't met for several years; in fact, Mrs. Dursley pretended she didn't have a sister, because her sister and her good-for-nothing husband were as unDursleyish as it was possible to be. The Dursleys shuddered to think what the neighbors would say if the Potters arrived in the street. The Dursleys knew that the Potters had a small son, too, but they had never even seen him. This boy was another good reason for keeping the Potters away; they didn't want Dudley mixing with a child like that. \n" +
-                "\n" +
-                "When Mr. and Mrs. Dursley woke up on the dull, gray Tuesday our story starts, there was nothing about the cloudy sky outside to suggest that strange and mysterious things would soon be happening all over the country. Mr. Dursley hummed as he picked out his most boring tie for work, and Mrs. Dursley gossiped away happily as she wrestled a screaming Dudley into his high chair. \n" +
-                "\n" +
-                "None of them noticed a large, tawny owl flutter past the window. ";
+    public static void main(String[] args) {
+        String hello = "Hello OOP / good bie!!!!!!!!!!!";
+        System.out.println(hello);
 
-        harryPotter = harryPotter.replaceAll(",", "");
-        harryPotter = harryPotter.replaceAll("\\.", "");// точку убирать только через левый двойно слеш
+        //OOP это тип данных
+        int a = 5;
+        Integer b = 6; // больше возможностей
 
-        java.lang.String[] words = harryPotter.split(" ");
+        // нам необходимо , "а" переделать в тип данныъ "double"
+
+        double c = (double) a;
+        System.out.println("a = " + a);
+        System.out.println("c = " + c);
+
+        Double d = b.doubleValue();
+
+        String number = "123456789";
+        Integer numberInt = Integer.valueOf(number);
+
+        // Найти площадь прямоугольника длиной 3 см и шириной 4 !
+//recfactoring причесывания кода
+        int leghte = 3;
+        int wigthe = 4;
+        int area = leghte * wigthe;
+        System.out.println(area);
+
+        Rectangle r1 = new Rectangle(3,4);
+        int areaR1 = r1.getArea();
+        System.out.println(areaR1);
+
+        Rectangle r2 = new Rectangle(7,12);
+        int areaR2 = r2.getArea();
+        System.out.println(areaR2 + " and " + areaR1);
+
+        System.out.println(r2.getPerimetr());
+
+        // Мы хотим в нашем 4 угольнике ректангле R2 увеличить длину на 3 !!
+        // Это длается с помощью Seterra !!!
+        r2.setLength(10); // добаили +3 ....
+        System.out.println(r2.getArea());
+        r2.setWidth(20);
+        System.out.println(r2.getWidth());
+
+        System.out.println(r2.toString());
+
+        Rectangle r3 = new Rectangle();
+        r3.setWidth(5);
+        r3.setLength(6);
+        System.out.println(r3.toString());
 
 
-        for (int i = 0; i < 47; i++) {
-
-            if (words[i].length()<=3) {
-                System.out.println( i+". "+words[i]); }
-        }
 
     }
 }
-//задание надом , найти знаки препинания и убрать .
